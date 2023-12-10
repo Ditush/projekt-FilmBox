@@ -184,7 +184,7 @@ const hvezdy = document.querySelectorAll('.fa-star');
 
 
 
-hvezdy.forEach((hvezda) => {hvezda.addEventListener('click', (e) => {const pocty =
+hvezdy.forEach((hvezda) => {hvezda.addEventListener('click', (e) => {pocty =
 	Number(e.target.textContent);
 	zvyrazneni(pocty);});});
 
@@ -192,15 +192,6 @@ hvezdy.forEach((hvezda) => {hvezda.addEventListener('mouseenter', (e) => {const 
 	Number(e.target.textContent);
 	zvyrazneni(pocty);});});
 
-/*
-bohužel netuším, jak zařídit MOUSELEAVE
-
 
 hvezdy.forEach((hvezda) => {hvezda.addEventListener('mouseleave', (e) => {zvyrazneni(pocty);})});
-*/
 
-/*
-hvezdy.forEach((hvezda) => {hvezda.addEventListener('mouseleave', (e) => {const pocet =
-	Number(e.target.textContent);
-	zvyrazneni(pocet);})});
-*/
