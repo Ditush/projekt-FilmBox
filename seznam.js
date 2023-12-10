@@ -103,4 +103,48 @@ const filmy = [
 			'Na zámek v podhůří Krkonoš přijíždí jeho nový majitel Štěpán se svojí snoubenkou, krásnou komtesou Blankou, a mladším bratrem Adamem. Cestou kočár nešťastně srazí kolemjdoucí dívku, Adam jí pomůže a ona se do něj zamiluje. Na zámku Adam objeví starou vlašskou knihu, která by měla obsahovat cestu k pokladům. Tajemné značky vlašské knihy však nedokáže vyluštit ani národopisec Jiráček, který v kraji sbírá pověsti a nevychází z údivu nad tím, že zdejší lidé stále věří v Krakonoše. Na zámku se objeví záhadný cizinec a nabídne Štěpánovi, že jej k pokladu za určitých podmínek dovede. Výprava do hor může začít. Naplní se Liduščina láska k Adamovi? Jakou záhadu skrývá starý obraz na zámku Hůrka a co strašlivého se v horách kdysi odehrálo? A kdo je vlastně Krakonoš a jaké je jeho největší tajemství? (csfd.cz, Česká televize)',
 		premiera: '2022-12-24',
 	},
+	{
+		id: 'star-wars',
+		nazev: 'Star Wars: Episoda IV - Nová naděje',
+		plakat: {
+			url: 'https://www.iposters.co.uk/media/catalog/product/0/3/0397ST_3.jpg?width=700&height=1000&store=default&image-type=image',
+			sirka: 420,
+			vyska: 592,
+		},
+		ochutnavka: 'Podmanivé sci-fi, kde Tě síla bude provázet.',
+		popis:
+			'Princezna Leia prchá ve své kosmické lodi před pronásledovateli ze strany Impéria. Na palubě lodi se totiž nacházejí tajné plány nové děsivé zbraně, Hvězdy smrti, kterou Impérium právě postavilo. Loď princezny Leii dohoní loď rytíře Temné síly a jednoho z nejbližších spolupracovníků císaře Impéria, Darth Vadera. Po krátkém boji je posádka lodi princezny přemožena a sama princezna je zajata. Darth Vader nařizuje prohledat loď a ukradené plány najít. Ty se už však na lodi nenacházejí. Princezna je ukryla do malého androida R2-D2 a toho poslala společně s androidem C-3PO v záchranném modulu na blízkou planetu Tatooine. Oba androidi jsou však vzápětí na planetě zajati domorodými obyvateli, Jawy. Ti oba obratem prodají Lukovi Skywalkerovi, mladíkovi, který vyrůstá v rodině svého strýce, farmáře. Luke brzy zjistí, že R2-D2 má v sobě nahraný vzkaz od jakési Leii, která žádá jakéhosi Obi-Wana o pomoc. R2-D2 se však v noci ztratí, a tak se druhý den ráno Luke společně s C-3PO vypraví androida hledat. Cestou je přepaden Písečnými lidmi a místní poustevník Ben mu zachrání život, když Písečné lidi od Bena odežene. Luke s úžasem zjišťuje, že Ben je ve skutečnosti onen hledaný Obi-Wan. Obi-Wan se Lukeovi přizná, že je rytířem Jedi, a předává mu světelný meč. Také Luka žádá o to, aby s ním vyrazil princezně Leie na pomoc. Luke to zprvu odmítá. V té době však na Tatooine přistane výsadek vojáků Impéria, kteří při hledání uprchlých androidů povraždí několik místních Jawů a také Lukova strýce a tetu. Luke se chce pomstít a přidává se k Obi-Wanovi. Společně vyrazí do blízkého města a hledají zde pilota, který by je odvezl na planetu Alderaan. Po kratším hledání narazí na pašeráka Hana Sola. Ten jim slibuje odvoz ve své lodi Millennium Falcon. Sám Solo je rád, že se dostane z planety, protože má problém s dluhem, který nezaplatil místnímu gangsterovi, Jabba Huttovi. A tak i on je rád, když urychleně odletí s Lukem, Obi-Wanem a svým chlupatým pilotem Chewbaccou z planety. To už však jejich loď pronásledují stíhačky Impéria... (csfd.cz, TV Prima)',
+		premiera: '1991-07-25',
+	},
+	{
+		id: 'coco',
+		nazev: 'Coco',
+		plakat: {
+			url: 'https://www.iposters.co.uk/media/catalog/product/0/4/0401CO_3.jpg?width=700&height=1000&store=default&image-type=image',
+			sirka: 420,
+			vyska: 592,
+		},
+		ochutnavka: 'Pohádka o síle rodinných kořenů, která osloví i dospělé.',
+		popis:
+			'Navzdory prazvláštnímu rodinnému zákazu muziky se Miguel touží stát uznávaným hudebníkem jako je jeho idol, Ernesto de la Cruz. V touze dokázat svůj talent se Miguel souhrou neuvěřitelných okolností ocitne v překrásné a barevné Říši mrtvých. Tam potká okouzlujícího šejdíře Hectora a společně se vypraví na strhující cestu odhalit skutečný příběh Miguelovy rodiny. (csfd.cz, Falcon)',
+		premiera: '2018-01-18',
+	},
 ]
+
+//4
+const seznam = document.querySelector('#seznam-filmu')
+
+seznam.innerHTML = ""
+filmy.forEach((film) => {
+	seznam.innerHTML += 
+	`<div class="col">
+		<div class="card">
+		<img src=${film.plakat.url} width=${film.plakat.sirka} height=${film.plakat.vyska} class="card-img-top" alt="plakát"/>
+			<div class="card-body">
+				<h5 class="card-title">${film.nazev}</h5>
+				<p class="card-text">${film.ochutnavka}</p>
+				<a href="film.html#${film.id}" class="btn btn-primary">Přehrát</a>
+		</div>
+		</div>
+	</div>`})
+//4-bonus
